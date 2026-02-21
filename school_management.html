@@ -28,7 +28,7 @@
             padding: 40px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.3);
             text-align: center;
-            max-width: 600px;
+            max-width: 700px;
             width: 100%;
         }
 
@@ -40,22 +40,48 @@
 
         h2 {
             color: #764ba2;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             font-size: 18px;
             font-weight: normal;
         }
 
+        h3 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .launch-btn {
+            display: inline-block;
+            margin: 15px 0;
+            padding: 15px 35px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .launch-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(39, 174, 96, 0.4);
+        }
+
         .modules {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
             margin-top: 30px;
         }
 
         .module-card {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 30px 20px;
+            padding: 25px 15px;
             border-radius: 10px;
             text-decoration: none;
             transition: transform 0.3s, box-shadow 0.3s;
@@ -68,18 +94,19 @@
         }
 
         .module-card h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
+            color: white;
+            font-size: 18px;
+            margin-bottom: 8px;
         }
 
         .module-card p {
-            font-size: 14px;
+            font-size: 13px;
             opacity: 0.9;
         }
 
         .back-btn {
             display: inline-block;
-            margin-top: 30px;
+            margin-top: 25px;
             padding: 12px 30px;
             background: #333;
             color: white;
@@ -94,7 +121,19 @@
 
         .icon {
             font-size: 40px;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
+        }
+
+        .divider {
+            height: 1px;
+            background: #ddd;
+            margin: 25px 0;
+        }
+
+        .info-text {
+            color: #666;
+            font-size: 14px;
+            margin-top: 15px;
         }
     </style>
 </head>
@@ -102,34 +141,55 @@
     <div class="container">
         <h1>🏫 School Management System</h1>
         <h2>SAI VIDYALAYA SENIOR SECONDARY SCHOOL</h2>
+        <h3>Classes: PreKG - 12th Standard</h3>
 
+        <!-- Launch Application Button -->
+        <a href="school/school_management_system/Start_School_System.bat" class="launch-btn">
+            🚀 Launch School Management Application
+        </a>
+        <p class="info-text">Click above to open the desktop application</p>
+
+        <div class="divider"></div>
+
+        <!-- Quick Access Modules -->
+        <h3 style="color: #667eea; margin-top: 20px;">📁 Quick Access Modules</h3>
         <div class="modules">
             <a href="school/school_management_system/admin.py" class="module-card">
                 <div class="icon">👤</div>
-                <h3>Admin Panel</h3>
-                <p>Manage users and settings</p>
+                <h3>Admin</h3>
+                <p>Admin Panel</p>
             </a>
 
             <a href="school/school_management_system/teacher.py" class="module-card">
                 <div class="icon">👨‍🏫</div>
-                <h3>Teachers</h3>
-                <p>Teacher management</p>
+                <h3>Teacher</h3>
+                <p>Teacher Module</p>
             </a>
 
             <a href="school/school_management_system/student.py" class="module-card">
                 <div class="icon">🎓</div>
-                <h3>Students</h3>
-                <p>Student records and management</p>
+                <h3>Student</h3>
+                <p>Student Module</p>
             </a>
 
             <a href="school/school_management_system/bus_gui.py" class="module-card">
                 <div class="icon">🚌</div>
                 <h3>Transport</h3>
-                <p>Bus and transport management</p>
+                <p>Bus Management</p>
             </a>
         </div>
 
-        <a href="../index.html" class="back-btn">← Back to Home</a>
+        <div class="divider"></div>
+
+        <!-- Additional Links -->
+        <div style="margin-top: 20px;">
+            <a href="school/school_management_system/README.md" target="_blank" style="color: #667eea; margin: 0 10px; text-decoration: none;">📖 Documentation</a>
+            <span style="color: #ddd;">|</span>
+            <a href="school/school_management_system/HOW_TO_OPEN.txt" target="_blank" style="color: #667eea; margin: 0 10px; text-decoration: none;">❓ How to Open</a>
+        </div>
+
+        <br>
+        <a href="index.html" class="back-btn">← Back to Home</a>
     </div>
 </body>
 </html>
